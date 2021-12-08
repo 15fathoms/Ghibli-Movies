@@ -4,11 +4,28 @@
   font-family : 'Inconsolata';
   border-radius: 0.5rem;
 }
+body{
+    margin: 0;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.far{
+    color: #181818;
+    font-size: 1.5rem;
+}
 
 h1{
     text-align: center;
+    font-size: 1.5rem;
 }
-
+.switchcontainer{
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 header{
     margin-bottom: 5rem;
 }
@@ -69,12 +86,24 @@ h3{
   right: 2rem;
 }
 
+::-webkit-scrollbar {
+    margin: 0.125rem;
+    width: 5px;
+    height: 8px;
+    background-color: #fff;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+      background: #000;
+  }
+
 .animationIn{
   animation: IN 0.5s cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
 }
 .animationOut{
   animation: OUT 0.5s cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
 }
+
 
 @keyframes IN{
   0%{
