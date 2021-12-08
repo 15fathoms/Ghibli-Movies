@@ -1,22 +1,25 @@
-let head = document.querySelector('head');
-let buttons = document.querySelectorAll('.grid-container button');
+let darkModeButton = document.getElementById('.switchcontainer');
+let icone = document.getElementById('header i');
 
-head.innerHTML += `<link class="switchcolor" href="#" rel="stylesheet">`;
+function darkMode(){
+    if(localStorage.getItem('darkMode') === null){
+        localStorage.setItem('darkMode', 'enabled');
+    }
+    if(localStorage.getItem('darkMode') === 'enabled'){
+        localStorage.setItem('darkMode', 'disabled');
+    }else{
+        localStorage.setItem('darkMode', 'enabled');
+    }
+}
 
-/*for(i of buttons){
-    i.addEventListener('click', () => {
-        let link = document.querySelector('.switchcolor');
-        let color = i.getAttribute('data-color');
-        console.log(color);
-        link.setAttribute('href', `https://starter.lvl1.fr/themeCssColor/${color}.css`);
-    })
-}*/
+if(localStorage.getItem('darkMode') === 'enabled'){
+    icone.classList.add('fa-moon');
+}
+else if(localStorage.getItem('darkMode') === 'disabled'){
+    icone.classList.add('fa-sun');
+}
+else if(localStorage.getItem('darkMode') === null){
+    icone.classList.add('fa-sun');
+}
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        let link = document.querySelector('.switchcolor');
-        let color = button.getAttribute('data-color');
-        console.log(color);
-        link.setAttribute('href', `https://starter.lvl1.fr/themeCssColor/${color}.css`);
-    })
-})
+darkModeButton.addEventListener('click', darkMode);
