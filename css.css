@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,400i,700");
+
+*{
+  font-family : 'Inconsolata';
+  border-radius: 0.5rem;
+}
+
+body{
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+}
+.container{
+  display : grid;
+  width: 30rem;
+  grid-template-columns: 10rem 1fr;
+  margin:  5rem auto;
+  gap: 2rem;
+  position: relative;
+  padding: 1rem;
+}
+img{
+  top: -8rem;
+  left: 5rem;
+  width: 10rem;
+  object-fit: cover;
+  object-position: bottom;
+  background: #181818;
+  padding: .35rem;
+  position: absolute;
+  overflow: hidden;
+}
+h1{
+  margin-bottom: 0;
+}
+h3{
+  margin-top: 0.5rem;
+}
+.txt{
+  grid-area: 1/2/2/3;
+  padding: 1rem;
+  color: white;
+  background: #181818;
+}
+
+.fas{
+  font-size: 2rem;
+  position: absolute;
+  cursor: pointer;
+}
+.fa-angle-left{
+  left: 2rem;
+}
+.fa-angle-right{
+  right: 2rem;
+}
+
+.animationIn{
+  animation: IN 0.5s cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
+}
+.animationOut{
+  animation: OUT 0.5s cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
+}
+
+@keyframes IN{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes OUT{
+   0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
