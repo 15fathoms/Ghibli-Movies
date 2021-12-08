@@ -3,6 +3,7 @@
 *{
   font-family : 'Inconsolata';
   border-radius: 0.5rem;
+  transition: 0.5s ease;
 }
 body{
     margin: 0;
@@ -10,10 +11,14 @@ body{
 header{
     display: grid;
     grid-template-columns: 1fr auto;
+    width: 50rem;
+    max-width: 100%;
+    margin: 0 auto;
 }
 .far{
     color: #181818;
     font-size: 1.5rem;
+    position: absolute;
 }
 
 h1{
@@ -25,6 +30,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 header{
     margin-bottom: 5rem;
@@ -102,6 +108,35 @@ h3{
 }
 .animationOut{
   animation: OUT 0.5s cubic-bezier(0.5, 0.5, 0.4, 1.2) forwards;
+}
+
+.dark{
+    background: #181818;
+}
+.dark .far{
+    color: white;
+}
+.dark .txt{
+    color: #181818;
+}
+.dark .fas{
+    color: white;
+}
+.dark .txt{
+    background: white;
+}
+.dark img{
+    background: white;
+}
+.dark h1{
+    color: white;
+}
+.dark::-webkit-scrollbar {
+    background-color: #181818;
+}
+  
+.dark::-webkit-scrollbar-thumb {
+      background: white;
 }
 
 
