@@ -12,7 +12,7 @@ async function fetchGhibli(){
     let img = document.querySelector("img");
     let widthimg = img.offsetWidth;
     img.setAttribute("style", `height : ${widthimg}px`);
-    let title = document.querySelector("h1");
+    let title = document.querySelector("h2");
     img.setAttribute("src", data.image)
     title.textContent = data.original_title;
     let titleR = document.querySelector("h3");
@@ -73,6 +73,6 @@ async function fetchGhibli(){
             txt.classList.add("animationIn");
         }, 500);
     });  
-  }
+}
   
   main();

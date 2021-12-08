@@ -5,10 +5,22 @@
   border-radius: 0.5rem;
 }
 
-body{
-  min-height: 120vh;
-  display: flex;
-  align-items: center;
+h1{
+    text-align: center;
+}
+
+header{
+    margin-bottom: 5rem;
+}
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
 }
 .container{
   display : grid;
@@ -29,8 +41,9 @@ img{
   padding: .35rem;
   position: absolute;
   overflow: hidden;
+  z-index: 1;
 }
-h1{
+h2{
   margin-bottom: 0;
 }
 h3{
@@ -47,6 +60,7 @@ h3{
   font-size: 2rem;
   position: absolute;
   cursor: pointer;
+  margin: -1.5rem;
 }
 .fa-angle-left{
   left: 2rem;
@@ -78,4 +92,16 @@ h3{
   100%{
     transform: scale(0);
   }
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 0 2rem;
+    }
+    img{
+        top: -5rem;
+        left: 15rem;
+    }
 }
