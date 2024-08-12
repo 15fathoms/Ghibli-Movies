@@ -1,5 +1,5 @@
 async function fetchGhibli(){
-    return fetch("https://newghibliapi.herokuapp.com/films")
+    return fetch("https://ghibliapi.vercel.app/films")
     .then((res) => {
       return res.json()
     })
